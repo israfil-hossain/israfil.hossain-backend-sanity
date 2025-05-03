@@ -20,14 +20,14 @@ export default defineType({
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'text',
+      type: 'blockContent',
     }),
     defineField({
       name: 'thumbnail',
       title: 'Thumbnail Image',
       type: 'image',
       options: {
-        hotspot: true, // Allows you to focus on specific parts of the image
+        hotspot: true,
       },
     }),
     defineField({
@@ -57,7 +57,27 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'Content',
-      type: 'blockContent', // Use a block content type if you want rich text support
+      type: 'blockContent',
+    }),
+
+    // New fields
+    defineField({
+      name: 'isRunning',
+      title: 'Is Running',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'showPortfolio',
+      title: 'Show in Portfolio',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'needInvestment',
+      title: 'Needs Investment',
+      type: 'boolean',
+      initialValue: false,
     }),
   ],
 })
