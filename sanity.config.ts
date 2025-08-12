@@ -5,7 +5,7 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'israfil.hossain',
+  title: 'Flowentech Admin',
 
   projectId: 'ab0ypbx5',
   dataset: 'production',
