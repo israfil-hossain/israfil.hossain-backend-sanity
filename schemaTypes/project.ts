@@ -73,6 +73,12 @@ export default defineType({
       type: 'boolean',
       initialValue: false,
     }),
+     defineField({
+      name: 'showFlowentech',
+      title: 'Show in Flowentech',
+      type: 'boolean',
+      initialValue: false,
+    }),
     defineField({
       name: 'needInvestment',
       title: 'Needs Investment',
