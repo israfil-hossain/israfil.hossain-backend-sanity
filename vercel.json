@@ -1,32 +1,10 @@
 {
-  "buildCommand": "pnpm build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": null,
-  "installCommand": "pnpm install",
-  "devCommand": "pnpm start",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+  "installCommand": "npm install",
+  "functions": {
+    "pages/api/revalidate.js": {
+      "maxDuration": 30
     }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
-    }
-  ],
-  "environment": {
-    "NPM_CONFIG_REGISTRY": "https://registry.npmjs.org/"
-  },
-  "nodeVersion": "18.x"
+  }
 }
